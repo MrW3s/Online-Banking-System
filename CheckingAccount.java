@@ -4,8 +4,8 @@ public class CheckingAccount extends BankAccount {
     private double over_draft;
 
     /** constructor for the subclass to create the relationship with BankAccount */
-    public CheckingAccount(String name, int birthDate, int acctnum, double balance, double over_draft) {
-        super(name, birthDate, acctnum, balance);
+    public CheckingAccount(int accountNumber, double balance, double over_draft) {
+        super(accountNumber, balance);
         this.over_draft = over_draft;
     }
 
@@ -22,7 +22,8 @@ public class CheckingAccount extends BankAccount {
     @Override
     public void withdraw(double amount) {
         if (amount <= getBalance()) {
-            super.withdraw(amount);
+            balance -= amount;
+            System.out.println("Withdrawl successful");
         } else if (amount <= getBalance() + over_draft) {
             balance -= amount;
             System.out.println("Warning: You have overdrafted your account!");

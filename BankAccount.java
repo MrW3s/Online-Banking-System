@@ -6,45 +6,31 @@
  *
  */
 
-public class BankAccount{
-    public String name;
-    public int birthDate;
-    public int acctnum;
-    public double balance;
+public abstract class BankAccount{
+
+    private int accountNumber;
+    protected double balance;
 
 
     /**constructor for balance*/
-    public BankAccount(String name, int birthDate, int acctnum, double balance){
-        this.name = name;
-        this.birthDate = birthDate;
-        this.acctnum = acctnum;
+    public BankAccount(int accountNumber, double balance){
+
+        this.accountNumber = accountNumber;
         this.balance = balance;
     }
-    /** getter for name*/
-    public String getName(){ return name;}
 
-    /** getter for birthday*/
-    public int getBirthDate(){return birthDate;}
 
     /** getter for account # */
-    public double getAcctnum(){return acctnum;}
+    public int getAccountNumber(){return accountNumber;}
 
     /** getter for balance*/
     public double getBalance(){return balance;}
 
-    /** setter for name*/
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    /** setter for birthdate*/
-    public void setBirthDate(int birthDate) {
-        this.birthDate = birthDate;
-    }
 
     /** setter for account #*/
-    public void setAcctnum(int acctnum) {
-        this.acctnum = acctnum;
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     /** setter for balance*/
@@ -58,12 +44,6 @@ public class BankAccount{
     }
 
     /**determines if a user has funds to make a withdraw*/
-    public void withdraw(double amount){
-        if(amount <= this.balance){
-            this.balance -= amount;
-        }else {
-            System.out.println("Insufficient Funds in your account.");
-        }
-    }//end of the withdraw method
+    public abstract void withdraw(double amount);
 
 }//end of class
