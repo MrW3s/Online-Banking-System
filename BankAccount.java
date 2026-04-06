@@ -1,20 +1,22 @@
 /**
  * @author thomaswesley
  * Bank account gathers the users information and also enables withdraws, deposits, and gets balance
+ * --How can this improve? The app could offer products based on certain thresholds the account
+ * holders reach ( pre-apprval for credit cards, loans, auto finance, etc) --
  *
  */
 
 public class BankAccount{
-    protected String name;
-    protected double b_day;
-    protected int acctnum;
-    protected double balance;
+    public String name;
+    public int birthDate;
+    public int acctnum;
+    public double balance;
 
 
     /**constructor for balance*/
-    public BankAccount(String name, double b_day, int acctnum, double balance){
+    public BankAccount(String name, int birthDate, int acctnum, double balance){
         this.name = name;
-        this.b_day = b_day;
+        this.birthDate = birthDate;
         this.acctnum = acctnum;
         this.balance = balance;
     }
@@ -22,7 +24,7 @@ public class BankAccount{
     public String getName(){ return name;}
 
     /** getter for birthday*/
-    public double getB_day(){return b_day;}
+    public int getBirthDate(){return birthDate;}
 
     /** getter for account # */
     public double getAcctnum(){return acctnum;}
@@ -36,8 +38,8 @@ public class BankAccount{
     }
 
     /** setter for birthdate*/
-    public void setB_day(double b_day) {
-        this.b_day = b_day;
+    public void setBirthDate(int birthDate) {
+        this.birthDate = birthDate;
     }
 
     /** setter for account #*/
