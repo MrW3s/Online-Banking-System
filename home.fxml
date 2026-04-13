@@ -1,0 +1,14 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.banking.HomeController"
+      spacing="10"
+      alignment="CENTER">
+
+    <Label text="Welcome to your dashboard"/>
+    <Label fx:id="nameLabel"/>
+    <Label fx:id="emailLabel"/>
+    <Label fx:id="phoneLabel"/>
+
+</VBox>

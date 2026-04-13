@@ -1,0 +1,30 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.banking.AccountController"
+      spacing="15" alignment="CENTER">
+
+    <Label text="Accounts"/>
+
+    <!-- Table -->
+    <TableView fx:id="accountTable" prefWidth="400">
+
+        <columns>
+            <TableColumn fx:id="accountNumberColumn" text="Account #" prefWidth="150"/>
+            <TableColumn fx:id="balanceColumn" text="Balance" prefWidth="150"/>
+        </columns>
+
+    </TableView>
+
+    <!-- Amount input -->
+    <TextField fx:id="amountField" promptText="Enter amount" maxWidth="200"/>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Deposit" onAction="#handleDeposit"/>
+        <Button text="Withdraw" onAction="#handleWithdraw"/>
+    </HBox>
+
+</VBox>

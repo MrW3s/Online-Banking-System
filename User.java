@@ -1,7 +1,4 @@
-/**
- * @author Thomas Wesley
- *
- */
+package com.banking;
 
 import java.util.ArrayList;
 
